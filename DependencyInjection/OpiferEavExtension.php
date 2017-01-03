@@ -36,7 +36,6 @@ class OpiferEavExtension extends Extension implements PrependExtensionInterface
     {
         $params = [
             'opifer_eav.attribute_class' => $config['attribute_class'],
-            'opifer_eav.media_class'     => $config['media_class'],
             'opifer_eav.option_class'    => $config['option_class'],
             'opifer_eav.schema_class'  => $config['schema_class'],
             'opifer_eav.valueset_class'  => $config['valueset_class'],
