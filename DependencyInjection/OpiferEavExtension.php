@@ -74,10 +74,6 @@ class OpiferEavExtension extends Extension implements PrependExtensionInterface
             'Opifer\EavBundle\Model\ValueSetInterface'  => $config['valueset_class'],
         ];
 
-        if ($config['media_class'] != '') {
-            $resolvableEntities['Opifer\EavBundle\Model\MediaInterface'] = $config['media_class'];
-        }
-
         foreach ($container->getExtensions() as $name => $extension) {
             switch ($name) {
                 case 'doctrine':

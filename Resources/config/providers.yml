@@ -5,7 +5,6 @@ parameters:
     opifer.eav.datetime_value_provider.class: Opifer\EavBundle\ValueProvider\DatetimeValueProvider
     opifer.eav.radio_value_provider.class: Opifer\EavBundle\ValueProvider\RadioValueProvider
     opifer.eav.integer_value_provider.class: Opifer\EavBundle\ValueProvider\IntegerValueProvider
-    opifer.eav.media_value_provider.class: Opifer\EavBundle\ValueProvider\MediaValueProvider
     opifer.eav.select_value_provider.class: Opifer\EavBundle\ValueProvider\SelectValueProvider
     opifer.eav.string_value_provider.class: Opifer\EavBundle\ValueProvider\StringValueProvider
     opifer.eav.text_value_provider.class: Opifer\EavBundle\ValueProvider\TextValueProvider
@@ -42,12 +41,6 @@ services:
         class: '%opifer.eav.integer_value_provider.class%'
         tags:
             - { name: opifer.eav.value_provider, alias: integer }
-
-    opifer.eav.media_value_provider:
-        class: '%opifer.eav.media_value_provider.class%'
-        arguments: ['%opifer_eav.media_class%']
-        tags:
-            - { name: opifer.eav.value_provider, alias: media }
 
     opifer.eav.string_value_provider:
         class: '%opifer.eav.string_value_provider.class%'
